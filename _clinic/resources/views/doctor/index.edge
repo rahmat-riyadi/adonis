@@ -1,0 +1,51 @@
+@layout('components/layout/default')
+@section('content')
+
+<div class="panel">
+    <div class="flex mb-4 items-center">
+        <h3 class="text-xl font-semibold mr-auto" >Daftar Dokter</h3>
+        <div class="flex">
+            <div class=" flex justify-center items-center ltr:rounded-l-md rtl:rounded-r-md px-3 font-semibold border ltr:border-r-0 rtl:border-l-0 border-[#e0e6ed] dark:border-[#17263c] dark:bg-[#1b2e4b]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <circle cx="11.5" cy="11.5" r="9.5" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M18.5 18.5L22 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <input id="iconLeft" type="text" placeholder="Cari..." class="form-input ltr:rounded-l-none rtl:rounded-r-none" />
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                    <th class="text-center">Register</th>
+                </tr>
+            </thead>
+            <tbody>
+                <template x-for="i in 10">
+                    <tr>
+                        <td x-text="i">
+                        </td>
+                        <td class="whitespace-nowrap">
+                            <div class="flex items-center gap-x-6">
+                                <img class="w-10 h-10 rounded-full overflow-hidden object-cover" src="{{ asset('assets/images/profile-16.jpeg') }}" alt="image" />
+                                <span>Rahmat Riyadi Syam</span>
+                            </div>
+                        </td>
+                        <td x-text="active"></td>
+                        <td>hehe</td>
+                        <td class="text-center"></td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+@end
